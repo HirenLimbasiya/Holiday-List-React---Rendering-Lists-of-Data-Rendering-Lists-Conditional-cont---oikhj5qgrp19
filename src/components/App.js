@@ -42,7 +42,8 @@ class App extends Component {
       <div id="main">
         {/* Do not remove the main div */}
         <ol>
-        {this.cityList.map((element,index) => {
+        {
+          this.cityList.slice(0 , 6).map((element,index) => {
           if(element.country == "India"){
             return <li key={"location"+index+1}>{element.name}</li>
           }
